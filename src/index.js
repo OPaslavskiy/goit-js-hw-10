@@ -2,6 +2,9 @@ import './css/styles.css';
 import fetchCountries from './fetchCountries';
 import Notiflix from 'notiflix';
 import createCountryCard from './createCountryCard';
+import createListCountry from './createListCountry';
+import { clearCard } from './clearListAndCard';
+import { clearList } from './clearListAndCard';
 
 let userrRequest;
 
@@ -17,6 +20,10 @@ inputForCountry.addEventListener(
 
 export default function usersSearch() {
   userrRequest = inputForCountry.value;
+  if (!userrRequest) {
+    clearCard();
+    clearList();
+  }
   fetchCountries(userrRequest)
     .then(data => {
       if (data.length > 10) {
@@ -31,5 +38,3 @@ export default function usersSearch() {
     })
     .catch(() => {});
 }
-
-// function createListCountry(data) {}

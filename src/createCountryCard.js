@@ -1,7 +1,8 @@
-export default function createCountryCard(data) {
-  const countryInfo = document.querySelector('.country-info');
-  const el = data[0];
+import { clearList } from './clearListAndCard';
 
+export default function createCountryCard(data) {
+  const el = data[0];
+  const countryInfo = document.querySelector('.country-info');
   countryInfo.innerHTML = `<div class="conteiner-for-name"><img src="${
     el.flags.svg
   }" alt="${el.name.official} flag" class="flag" width="40">
@@ -16,4 +17,5 @@ export default function createCountryCard(data) {
       <p class="languages"><span class="heder-span">Languages: </span>${Object.values(
         el.languages
       ).join(', ')}</p>`;
+  clearList();
 }

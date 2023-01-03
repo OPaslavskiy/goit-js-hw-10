@@ -1,7 +1,9 @@
 import Notiflix from 'notiflix';
+import { clearCard } from './clearListAndCard';
+import { clearList } from './clearListAndCard';
 
 Notiflix.Notify.init({
-  position: 'center-top',
+  position: 'center-center',
 });
 
 export default function fetchCountries(name) {
@@ -16,5 +18,7 @@ export default function fetchCountries(name) {
     })
     .catch(error => {
       Notiflix.Notify.failure('Oops, there is no country with that name');
+      clearCard();
+      clearList();
     });
 }
