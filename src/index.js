@@ -5,7 +5,6 @@ import createCountryCard from './createCountryCard';
 import createListCountry from './createListCountry';
 import { clearCard } from './clearListAndCard';
 import { clearList } from './clearListAndCard';
-// import { styleForCountry } from "./style";
 
 let userrRequest;
 
@@ -43,6 +42,4 @@ export default function usersSearch() {
 // ==============================style======================================
 const bodyOfDocument = document.body;
 import { styleForCountry } from './style';
-console.log(styleForCountry);
 bodyOfDocument.insertAdjacentHTML('afterbegin', styleForCountry);
-// elem.insertAdjacentHTML(position, string);

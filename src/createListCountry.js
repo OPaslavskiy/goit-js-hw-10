@@ -14,8 +14,6 @@ export default function createListCountry(data) {
     )
     .join('');
 
-  console.log(countrysList);
-
   countryList.innerHTML = countrysList;
   clearCard();
 }
