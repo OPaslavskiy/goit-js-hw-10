@@ -5,9 +5,9 @@ export default function createListCountry(data) {
   console.log(data);
   const countrysList = data
     .map(
-      ({ name, flags }) => `  <div list-card>
+      ({ name, flags }) => `  <div class="list-card">
         <li class="list-flag">
-        <img src="${flags.png}" alt="${name.official} flag" width="30">
+        <img src="${flags.png}" alt="${name.official} flag" class="flag-mini" width="40" height="auto">
         </li>
         <li class="list-country">${name.official}</li>
       </div>`

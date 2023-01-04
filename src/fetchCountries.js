@@ -4,6 +4,7 @@ import { clearList } from './clearListAndCard';
 
 Notiflix.Notify.init({
   position: 'center-center',
+  timeout: 2000,
 });
 
 export default function fetchCountries(name) {
